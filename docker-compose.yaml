@@ -1,0 +1,14 @@
+services:
+  rndbackend:
+    build: ./backend
+    container_name: rndbackend_c
+    ports:
+      - '5000:5000'
+  rndfrontend:
+    build: ./frontend
+    container_name: rndfrontend_c
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true
+  
